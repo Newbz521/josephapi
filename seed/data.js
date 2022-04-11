@@ -4,7 +4,7 @@ import { itineraries } from "./itineraries.js";
 
 const insertData = async () => {
   // reset database
-  db.dropDatabase();
+  await db.dropDatabase();
 
   // insert houses into database
   await Itinerary.insertMany(itineraries);
